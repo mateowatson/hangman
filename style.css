@@ -1,0 +1,625 @@
+/* -------------------------------------- */
+/* --------------- GLOBAL --------------- */
+/* -------------------------------------- */
+body {
+	color: var(--gray-dark);
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.game99__game-title {
+	font-family: 'Faster One', sans-serif;
+}
+
+.game99__btn_primary {
+	background-color: var(--orange);
+	color: #fff;
+}
+/* ------------------------------------------ */
+/* --------------- END GLOBAL --------------- */
+/* ------------------------------------------ */
+
+/* ------------------------------------ */
+/* --------------- HOME --------------- */
+/* ------------------------------------ */
+.game99-home__inner {
+	max-width: 600px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 100px 25px;
+}
+
+.game99-home__select {
+	margin-bottom: 1rem;
+}
+/* ---------------------------------------- */
+/* --------------- END HOME --------------- */
+/* ---------------------------------------- */
+
+
+/* ------------------------------------------- */
+/* --------------- TIC TAC TOE --------------- */
+/* ------------------------------------------- */
+.tictactoe {
+	position: relative;
+	width: 100%;
+
+	padding-bottom: 50px;
+}
+
+.tictactoe__heading1 {
+	text-align: center;
+	margin: 0;
+	background-color: var(--cyan);
+	color: var(--yellow);
+
+	padding: 1em  0 1em 0;
+	margin-bottom: 1em;
+}
+
+.tictactoe__heading2 {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.tictactoe__board {
+	position: relative;
+	display: block;
+	width: 300px;
+	
+	margin: 0 auto;
+}
+
+.tictactoe__spaces {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	margin: 50px 0;
+
+	width: 300px;
+	height: 300px;
+}
+
+.tictactoe__space {
+	position: relative;
+	display: block;
+	width: 33.3333%;
+	height: 33.3333%;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+
+	align-items: center;
+}
+
+.tictactoe__space:nth-child(1),
+.tictactoe__space:nth-child(2),
+.tictactoe__space:nth-child(3) {
+	border-bottom: 2px solid var(--gray-dark);
+}
+
+.tictactoe__space:nth-child(4),
+.tictactoe__space:nth-child(5),
+.tictactoe__space:nth-child(6) {
+	border-bottom: 2px solid var(--gray-dark);
+}
+
+.tictactoe__space:nth-child(1),
+.tictactoe__space:nth-child(4),
+.tictactoe__space:nth-child(7) {
+	border-right: 2px solid var(--gray-dark);
+}
+
+.tictactoe__space:nth-child(2),
+.tictactoe__space:nth-child(5),
+.tictactoe__space:nth-child(8) {
+	border-right: 2px solid var(--gray-dark);
+}
+
+.tictactoe__winner {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	color: #fff;
+	padding-top: 100px;
+	background-color: var(--cyan);
+}
+
+.tictactoe__winner-content {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.tictactoe__winner-btn {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.tictactoe__scoreboard {
+	position: relative;
+}
+
+.tictactoe__player-symbol {
+	font-size: 38px;
+}
+
+.tictactoe__go-home {
+	margin-top: 50px;
+}
+/* ----------------------------------------------- */
+/* --------------- END TIC TAC TOE --------------- */
+/* ----------------------------------------------- */
+
+/* --------------------------------------- */
+/* --------------- HANGMAN --------------- */
+/* --------------------------------------- */
+.hangman {
+	background-color: var(--teal);
+	min-height: 100vh;
+}
+
+.hangman__heading1 {
+	text-align: center;
+	padding: 100px 25px 25px 25px;
+	color: var(--purple);
+}
+
+.hangman__board-wrapper {
+	padding: 0 0 50px 0;
+}
+
+.hangman__board {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 24px;
+	border-radius: 5px;
+}
+
+.hangman__btn {
+	display: block;
+	width: 100%;
+	background-color: var(--purple);
+	color: #fff;
+}
+
+.hangman__btn:hover {
+	background-color: var(--pink);
+}
+
+.hangman__input-phrase {
+	width: 100%;
+	margin-bottom: 22px;
+	text-align: center;
+	font-size: 3em;
+}
+
+.hangman__guess {
+	margin-bottom: 22px;
+	width: 100%;
+	/*border: 0;*/
+	text-align: center;
+	font-size: 3em;
+}
+
+.hangman__phrase {
+	font-size: 3em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+.hangman__word {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.hangman__char {
+	display: block;
+	position: relative;
+	text-align: center;
+	width: 40px;
+	margin-right: 5px;
+}
+
+.hangman__char:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-bottom: 2px solid var(--purple);
+}
+
+.hangman__space:after {
+	border-bottom: none;
+}
+
+.hangman__letter:after {
+	background-color: #fff;
+}
+
+.hangman__char_revealed:after {
+	background-color: transparent;
+}
+
+
+.hangman__noose {
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 300px;
+	margin: 0 auto 50px auto;
+}
+
+.hangman__top-bar {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	top: 0;
+	right: 0;
+	width: 60%;
+	height: 10px;
+}
+.hangman__side-bar {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 10px;
+}
+.hangman__bottom-bar {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	bottom: 20px;
+	right: 0;
+	width: 100%;
+	height: 10px;
+}
+.hangman__bottom-front-bar {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	left: 0;
+	bottom: 0;
+	height: 20px;
+	width: 10px;
+}
+.hangman__rope {
+	display: block;
+	position: absolute;
+	background-color: var(--yellow);
+	top: 0;
+	right: 50%;
+	width: 10px;
+	height: 60px;
+}
+.hangman__neck-rope {
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	right: 50%;
+	top: 58px;
+	width: 50px;
+	height: 50px;
+	margin-right: -20px;
+	border-radius: 100px;
+	border: 10px solid var(--yellow);
+}
+.hangman__head {
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	right: 50%;
+	top: 52px;
+	width: 40px;
+	height: 50px;
+	transform: rotate(-15deg);
+	margin-right: -15px;
+	border-radius: 100px;
+	border: 8px solid #000;
+}
+.hangman__body {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	right: 50%;
+	top: 100px;
+	height: 50px;
+	width: 8px;
+	transform: rotate(10deg);
+}
+.hangman__left-leg {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	right: calc(50% + 25px);
+	top: 140px;
+	width: 8px;
+	height: 60px;
+	transform: rotate(45deg);
+}
+.hangman__right-leg {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	right: calc(50% - 10px);
+	top: 145px;
+	width: 8px;
+	height: 60px;
+	transform: rotate(-25deg);
+}
+.hangman__left-arm {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	right: calc(50% + 25px);
+	top: 90px;
+	width: 8px;
+	height: 50px;
+	transform: rotate(90deg);
+}
+.hangman__right-arm {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	right: calc(50% - 25px);
+	top: 88px;
+	width: 8px;
+	height: 50px;
+	transform: rotate(-100deg);
+}
+
+.hangman__letters-guessed-wrapper {
+	margin-top: 50px;
+}
+
+.hangman__letters-guessed-intro {
+	font-size: 1em;
+}
+
+.hangman__letters-guessed {
+	font-size: 1.5em;
+}
+
+.hangman__letter-guessed:last-child .hangman__letter-spacer {
+	display: none;
+}
+
+.hangman__end-dialog-message {
+	font-size: 5em;
+	text-align: center;
+	color: var(--purple);
+}
+
+.hangman__btn {
+	background-color: var(--teal);
+	width: 100%;
+}
+
+.hangman__btn-primary {
+	background-color: var(--purple);
+	width: 100%;
+	margin-bottom: 1em;
+}
+/* ------------------------------------------- */
+/* --------------- END HANGMAN --------------- */
+/* ------------------------------------------- */
+
+
+/* --------------------------------------- */
+/* --------------- MANCALA --------------- */
+/* --------------------------------------- */
+.mancala {
+	--man-brown: #6b4412;
+	--man-darkbrown: #4c3211;
+	--man-green: #656b12;
+	--man-dark-green: #51560b;
+	--man-yellow: #ead12e;
+
+	--man-sand: #e2dea1;
+	--man-sand-dark: #3a3929;
+
+	background-color: var(--man-sand);
+}
+
+.mancala__heading1, .mancala__winner-heading, .mancala__instructions h2 {
+	font-family: 'Macondo Swash Caps';
+	color: var(--man-sand-dark);
+}
+
+.mancala__heading1 {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 50px;
+	text-align: center;
+}
+
+.mancala__winner-heading {
+	color: #fff;
+	text-align: center;
+}
+
+.mancala__winner-notification {
+	position: relative;
+	padding-top: 100px;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	height: auto;
+	width: 100%;
+	background-color: var(--man-green);
+}
+
+.mancala__winner-options {
+	position: relative;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.mancala__btn {
+	display: block;
+	position: relative;
+	width: 100%;
+	color: var(--man-sand-dark);
+}
+
+.mancala__btn_primary {
+	margin: 50px 0 25px 0;
+	background-color: var(--man-sand);
+}
+
+.mancala__holes-wrapper, .mancala__turn {
+	margin: 0 auto;
+	width: 800px;
+}
+
+.mancala__holes-wrapper {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.mancala__turn {
+	font-size: 1.5em;
+	color: var(--man-sand-dark);
+}
+
+.mancala__holes {
+	/*display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;*/
+	position: relative;
+	display: block;
+	margin-left: 100px;
+	width: 600px;
+	height: 200px;
+}
+
+.mancala__hole {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	width: 100px;
+	height: 100px;
+	background-color: var(--man-brown);
+}
+
+.mancala__hole:nth-child(8),
+.mancala__hole:nth-child(9),
+.mancala__hole:nth-child(10),
+.mancala__hole:nth-child(11),
+.mancala__hole:nth-child(12),
+.mancala__hole:nth-child(13) {
+	float: left;
+}
+
+.mancala__hole_store {
+	position: absolute;
+	top: 0;
+	left: -100px;
+	background-color: var(--man-green);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+}
+
+.mancala__hole_store:nth-child(14) {
+	left: 600px;
+}
+
+.mancala__stones {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 65px;
+	height: 80px;
+	border-radius: 25%;
+	background-color: var(--man-darkbrown);
+
+	z-index: 99999;
+
+	cursor: pointer;
+}
+
+.mancala__stones-count {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 16px;
+	color: #000;
+	opacity: .6;
+}
+
+.mancala__hole_store .mancala__stones-count {
+	color: #fff;
+}
+
+.mancala__hole_store .mancala__stones {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+.mancala__stone {
+	display: block;
+	top: 5px;
+	left: 5px;
+	width: 5px;
+	height: 15px;
+	margin-right: 2px;
+	border-radius: 100%;
+	background-color: var(--man-yellow);
+	transform: rotate(20deg);
+}
+
+.mancala__stone:nth-child(odd) {
+	transform: rotate(15deg);
+}
+
+.mancala__stone:nth-child(4n + 1) {
+	transform: rotate(-10deg);
+}
+
+.mancala__instructions {
+	padding: 50px 24px;
+	max-width: 690px;
+	margin: 0 auto;
+	color: var(--man-sand-dark);
+}
+
+.mancala__grass-canvas {
+	position: absolute;
+	top: -5px;
+	left: -3px;
+	z-index: 9999;
+}
+
+.mancala__grass-canvas_14 {
+	left: auto;
+	right: -3px;
+}
+/* ------------------------------------------- */
+/* --------------- END MANCALA --------------- */
+/* ------------------------------------------- */
